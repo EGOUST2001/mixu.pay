@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="{{ url_for('static', filename='google-translate.js') }}"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+</head>
+<body>
+<div style=" box-shadow: 0 0 10px rgba(0,0,0,0.5); width: 100%">
+<div class="main-content">
+    <div style="display: flex; justify-content: right">
+        <div class="language">
+            <img src="static/Assets/lang/lang__ru.png" alt="ru" data-google-lang="ru" class="language__img">
+            <img src="static/Assets/lang/lang__en.png" alt="en" data-google-lang="en" class="language__img">
+            <img src="static/Assets/lang/lang__de.png" alt="de" data-google-lang="de" class="language__img">
+            <img src="static/Assets/lang/lang__fr.png" alt="fr" data-google-lang="fr" class="language__img">
+            <img src="static/Assets/lang/lang__pt.png" alt="pt" data-google-lang="pt" class="language__img">
+            <img src="static/Assets/lang/lang__es.png" alt="es" data-google-lang="es" class="language__img">
+            <img src="static/Assets/lang/lang__it.png" alt="it" data-google-lang="it" class="language__img">
+            <img src="static/Assets/lang/lang__zh.png" alt="zh" data-google-lang="zh-CN" class="language__img">
+            <img src="static/Assets/lang/lang__ar.png" alt="ar" data-google-lang="ar" class="language__img">
+            <img src="static/Assets/lang/lang__nl.png" alt="nl" data-google-lang="nl" class="language__img">
+            <img src="static/Assets/lang/lang__sv.png" alt="sv" data-google-lang="sv" class="language__img">
+        </div>
+    </div>
+    <form action="" method="post" name="login">
+        <h3 class="logo-text">ПРОФСОЮЗ <br> БАШКИРСКОГО ГОСУДАРСТВЕННОГО <br> МЕДЕЦИНСКОГО УНИВЕРСИТЕТА</h3>
+        <div style="display: flex; justify-content: center">
+        <img class="logo-img" src="static/Assets/BGMU-logo.png">
+        </div>
+        <h1 class="logo-text-2">ТАРИФНЫЕ ПЛАНЫ <br> ДЛЯ СТУДЕНТОВ И СОТРУДНИКОВ</h1>
+        <div style="display: flex; justify-content: center">
+            <input style="width: 300px; margin-right: auto; margin-left: auto" type="submit" value="Заказать звонок" name="callback" id="callback">
+        </div>
+        <div style="width: 100%; margin-left: auto; margin-right: auto">
+
+
+            <div class="logo-container">
+                <img class="logo-img-2" src="static/Assets/bilayn-logo.png">
+                <img class="logo-img-2" src="static/Assets/mixu-logo.png">
+            </div>
+
+
+            <table>
+                <tr>
+                    <td rowspan="2" style="writing-mode: vertical-lr; text-align: right; font-size: 15px;">тариф</td>
+                    <th rowspan="2" style="font-size: 35px; line-height: 40px; color: orange; max-width: 100px">Яркое <br> решение</th>
+                    <th style="color: black; padding-right: 150px; font-size: 15px; vertical-align: bottom" colspan="5">рублей в месяц</th>
+                </tr>
+                <tr style="line-height: 10px;">
+                    <td style="font-weight: bold; color:#cf6419; border-top: 1px solid gray;">300р</td>
+                    <td style="font-weight: bold; color:#eec31b; border-top: 1px solid gray;">600р</td>
+                    <td style="font-weight: bold; color:#c0127f; border-top: 1px solid gray;">800р</td>
+                    <td style="font-weight: bold; color:#51418e; border-top: 1px solid gray; width: 30px">1250р</td>
+                </tr>
+                <tr style="height: 20px"></tr>
+                <tr style="line-height: 60px; border-bottom: 1px solid #e1e2e2;">
+                    <td style="width: 30px; border-bottom: 1px solid white;"></td>
+                    <td style="font-size: 22px; line-height: 15px; margin-top: 20px">Пакет минут<br><small style="font-size: 15px">+ ∞ билайн</small></td>
+                    <td>800</td>
+                    <td>1000</td>
+                    <td>2500</td>
+                    <td>5000</td>
+                </tr>
+                <tr style="line-height: 60px; border-bottom: 1px solid #e1e2e2; vertical-align: bottom;">
+                    <td style="width: 30px; border-bottom: 1px solid white;"></td>
+                    <td style="font-size: 22px">SMS/MMS</td>
+                    <td>500</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                </tr>
+                <tr style="line-height: 60px; border-bottom: 1px solid #e1e2e2;">
+                    <td style="width: 30px;"></td>
+                    <td style="font-size: 22px">Интернет</td>
+                    <td>50<small style="font-size: 15px">Гб</small></td>
+                    <td style="font-size: 40px; padding-left: 20px">∞</td>
+                    <td style="font-size: 40px; padding-left: 20px">∞</td>
+                    <td style="font-size: 40px; padding-left: 20px">∞</td>
+                </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="hidden" name="tarif" id="tarif"></td>
+                        <td><input type="submit" value="Заказать" name="300" id="three"></td>
+                        <td><input type="submit" value="Заказать" name="600" id="six"></td>
+                        <td><input type="submit" value="Заказать" name="800" id="eight"></td>
+                        <td><input type="submit" value="Заказать" name="1250" id="thousand"></td>
+                    </tr>
+            </table>
+        </div>
+    </form>
+</div>
+</div>
+<div class="footer">
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 30px; margin-right: auto; margin-left: auto; width: 80%;">
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="static/Assets/dot.png" class="footer-dot"><div class="footer-item">Выгода до 50%<br><small style="font-size: 12px; color: black; line-height: 12px">на абонентскую плату по сравнению <br> с салонами связи других операторов</small></div>
+        </div>
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="static/Assets/dot.png" class="footer-dot"><div class="footer-item">Переход на тариф <br> с сохранением номера</div>
+        </div>
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="static/Assets/dot.png" class="footer-dot"><div class="footer-item">0 рублей на звонки<br><small style="font-size: 12px; color: black; line-height: 12px">внутри сети</small></div>
+
+        </div>
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="static/Assets/dot.png" class="footer-dot"><div class="footer-item">Безлимит на соцсети</div>
+        </div>
+    </div>
+</div>
+    <div style="background: orange; background-size: cover; margin-right: auto; margin-left: auto">
+        <div style="margin-right: auto; margin-left: auto; width: 800px; height: 70px; display: flex; flex-direction: row; justify-content: center; align-items: center">
+        <p class="footer-text" style="padding-right: 100px">Телефон для подключения</p>
+            <div style="display: flex; align-content: center">
+                <p style="text-align: left"></p>
+        <a href="https://web.whatsapp.com/send?phone=79050003343" class="footer-itme-link"><img src="static/Assets/whatsup.png" style="width: 20px; padding: 5px"></a>
+        <a href="https://t.me/beeline_mixu" class="footer-itme-link"><img src="static/Assets/telegram.png" style="width: 20px; padding: 5px"></a>
+        <a class="footer-itme-link"><img src="static/Assets/phone.png" style="width: 15px; padding: 5px"></a>
+            </div>
+        <a href="tel:+79050003343" style="text-decoration: none; padding-left: 15px; font-size: 20px;"> <p class="footer-text" style="padding-right: 100px">8 905 000 33 43</p></a>
+
+        </div>
+    </div>
+<script>
+    document.querySelector("#three").onclick = function(){
+        document.getElementById("tarif").value = "300";
+    };
+    document.querySelector("#six").onclick = function(){
+        document.getElementById("tarif").value = "600";
+    };
+    document.querySelector("#eight").onclick = function(){
+        document.getElementById("tarif").value = "800";
+    };
+    document.querySelector("#thousand").onclick = function(){
+        document.getElementById("tarif").value = "1250";
+    };
+    document.querySelector("#callback").onclick = function(){
+        document.getElementById("tarif").value = "Заказ обратного звонка";
+    };
+</script>
+</body>
+</html>

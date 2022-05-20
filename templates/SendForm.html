@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="{{ url_for('static', filename='jquery.maskedinput.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="{{ url_for('static', filename='google-translate.js') }}"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+</head>
+<body>
+<div style=" box-shadow: 0 0 10px rgba(0,0,0,0.5); width: 100%">
+    <div class="main-content">
+        <h3 class="logo-text">ПРОФСОЮЗ <br> БАШКИРСКОГО ГОСУДАРСТВЕННОГО <br> МЕДЕЦИНСКОГО УНИВЕРСИТЕТА</h3>
+        <div style="display: flex; justify-content: center">
+            <img class="logo-img" src="../static/Assets/BGMU-logo.png">
+        </div>
+        <h1 class="logo-text-2">{{tarif}}</h1>
+        <div>
+            <form action="" method="post" name="login" style="display: flex;flex-direction: column;justify-content: flex-end;align-items: center;">
+                <input class="form-text-input" placeholder="Ваше имя" type="text" name="name" required>
+                <input class="form-text-input" placeholder="Ваш номер телефона" type="tel" name="number" id="number" required>
+                <div style="display: flex;flex-direction: row;width: 50%;align-content: center;justify-content: space-between; align-items: center">
+                    <a href="/" style="width: 50%;">Вернуться обратно</a>
+                    <input style="" type="submit" value="Отправить" name="callback" id="callback">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 30px; margin-right: auto; margin-left: auto; width: 80%;">
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="../static/Assets/dot.png" class="footer-dot"><div class="footer-item">Выгода до 50%<br><small style="font-size: 12px; color: black; line-height: 12px">на абонентскую плату по сравнению <br> с салонами связи других операторов</small></div>
+        </div>
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="../static/Assets/dot.png" class="footer-dot"><div class="footer-item">Переход на тариф <br> с сохранением номера</div>
+        </div>
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="../static/Assets/dot.png" class="footer-dot"><div class="footer-item">0 рублей на звонки<br><small style="font-size: 12px; color: black; line-height: 12px">внутри сети</small></div>
+
+        </div>
+        <div style="width: 50%;display: flex; flex-direction: row;">
+            <img src="../static/Assets/dot.png" class="footer-dot"><div class="footer-item">Безлимит на соцсети</div>
+        </div>
+    </div>
+</div>
+    <div style="background: orange; background-size: cover; margin-right: auto; margin-left: auto">
+        <div style="margin-right: auto; margin-left: auto; width: 800px; height: 70px; display: flex; flex-direction: row; justify-content: center; align-items: center">
+        <p class="footer-text" style="padding-right: 100px">Телефон для подключения</p>
+            <div style="display: flex; align-content: center">
+                <p style="text-align: left"></p>
+        <a href="https://web.whatsapp.com/send?phone=79050003343" class="footer-itme-link"><img src="../static/Assets/whatsup.png" style="width: 20px; padding: 5px"></a>
+        <a href="https://t.me/beeline_mixu" class="footer-itme-link"><img src="../static/Assets/telegram.png" style="width: 20px; padding: 5px"></a>
+        <a class="footer-itme-link"><img src="../static/Assets/phone.png" style="width: 15px; padding: 5px"></a>
+            </div>
+        <a href="tel:+79050003343" style="text-decoration: none; padding-left: 15px; font-size: 20px;"> <p class="footer-text" style="padding-right: 100px">8 905 000 33 43</p></a>
+
+        </div>
+    </div>
+<script>
+    $(function($){
+      $("#number").mask("8(999) 999-9999");
+    });
+</script>
+</body>
+</html>
